@@ -50,6 +50,17 @@ public class Team {
     public void addGoalsAgainst(int goals) {
         goalsAgainst += goals;
     }
+    @Override
+    public String toString() {
+        return name + " | Pts: " + getPoints() +
+           " | W: " + wins +
+           " | D: " + draws +
+           " | L: " + losses +
+           " | GF: " + goalsFor +
+           " | GA: " + goalsAgainst +
+           " | GD: " + getGoalDifference();
+}
+
     /*public void recordMatch(int goalsFor, int goalsAgainst) {
         this.goalsFor += goalsFor;
         this.goalsAgainst += goalsAgainst;

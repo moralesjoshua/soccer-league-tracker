@@ -32,7 +32,7 @@ public class League {
         homeTeam.addGoalsAgainst(awayGoals);
         awayTeam.addGoalsFor(awayGoals);
         awayTeam.addGoalsAgainst(homeGoals);
-        
+
         if (homeGoals > awayGoals) {
             homeTeam.addWin();
             awayTeam.addLoss();
@@ -44,5 +44,21 @@ public class League {
             awayTeam.addDraw();
         }
     }
-    
+    public List<Team> getStandings() {
+        List<Team> standings = new ArrayList<>(teams);
+
+        standings.sort((t1, t2) -> {
+            if (t2.getPoints() != t1.getPoints()) {
+                return t2.getPoints() - t1.getPoints();
+            }
+
+            if (t2.getGoalDifference() != t1.getGoalDifference()) {
+                return t2.getGoalDifference() - t1.getGoalDifference();
+            }
+
+            return t2.getGoalsFor() - t1.getGoalsFor();
+    });
+
+    return standings;
+}
 }

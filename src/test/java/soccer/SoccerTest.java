@@ -1,5 +1,6 @@
-// Premier
 package soccer;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
@@ -10,22 +11,20 @@ public class SoccerTest {
         League league = new League();
         Team arsenal = new Team("Arsenal");
         Team newcastle = new Team("Newcastle");
+        Team liverpool = new Team("Liverpool");
         league.addTeam(arsenal);
         league.addTeam(newcastle);
+        league.addTeam(liverpool);
 
-        Match match = new Match(arsenal, newcastle, 2, 1);
+        Match match = new Match(arsenal, newcastle, 2, 0);
+        Match match2 = new Match(liverpool, arsenal, 3, 1);
         league.addMatch(match);
+        league.addMatch(match2);
 
-        assertEquals(3, arsenal.getPoints());
-        assertEquals(1, arsenal.getWins());
-        assertEquals(2, arsenal.getGoalsFor());
-        assertEquals(1, arsenal.getGoalsAgainst());
-        assertEquals(1, arsenal.getGoalDifference());
+        List<Team> standings = league.getStandings();
+        assertEquals("Liverpool", standings.get(0).getName());
+        assertEquals("Arsenal", standings.get(1).getName());
+        assertEquals("Newcastle", standings.get(2).getName());
 
-        assertEquals(0, newcastle.getPoints());
-        assertEquals(1, newcastle.getLosses());
-        assertEquals(1, newcastle.getGoalsFor());
-        assertEquals(2, newcastle.getGoalsAgainst());
-        assertEquals(-1, newcastle.getGoalDifference());
     }
 }
