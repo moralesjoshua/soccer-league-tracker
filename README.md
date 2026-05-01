@@ -6,7 +6,7 @@ Features
 - Point allocation for Wins, Draws, Losses
 - GF, GA, and GD are also accounted for
 - Reset the league standings back to 0 for all teams
-- Relevant detailsl such as team names and goals are recorded into a .txt
+- Relevant details such as team names and goals are recorded into a .txt
 
 
 

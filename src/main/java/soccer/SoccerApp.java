@@ -21,7 +21,9 @@ import javafx.stage.Stage;
 public class SoccerApp extends Application {
     private League league;
 
-    // The league is loaded when the application starts. If loading fails, a new league with is placed.
+    /*
+     * The league is loaded when the application starts. If loading fails, a new league with is placed.
+     */
     @Override
     public void start(Stage stage) {
         if (league == null) {
@@ -34,17 +36,22 @@ public class SoccerApp extends Application {
             standingsScreen(stage);
         }
         
-
-    // The standings screen displays the league table and provides buttons to add matches, reset the league, or exit the application.
+        /*
+         * The standings screen displays the league table and provides buttons to add matches, reset the league, or exit the application.
+         */
     private void standingsScreen(Stage stage) {
         Label title = new Label("Soccer League Tracker");
 
-        // Style title
+        /*
+         * Style title
+         */
         title.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
         HBox titleBox = new HBox(title);
         titleBox.setAlignment(Pos.CENTER);
 
-        // Create table and columns
+        /*
+         * Create table and columns
+         */
         TableView<Team> table = new TableView<>();
 
         TableColumn<Team, String> nameColumn = new TableColumn<>("Team");
@@ -73,12 +80,15 @@ public class SoccerApp extends Application {
 
         table.getColumns().addAll(nameColumn, pointsColumn, winsColumn, drawsColumn, lossesColumn, gfColumn, gaColumn, gdColumn);
 
-        // Set table height
+        /*
+         * Set table height
+         */
         table.setPrefHeight(250);
         table.setMaxHeight(320);
 
-        // Style bottom 3 teams with red background for relegation zone
-
+        /*
+         * Style bottom 3 teams with red background for relegation zone
+         */
         table.setRowFactory(tv -> new TableRow<Team>() {
         @Override
         public void updateItem(Team team, boolean empty) {
@@ -97,14 +107,20 @@ public class SoccerApp extends Application {
         }
         });                                    
             
-
+        /*
+         * Populate table with league standings. The standings are sorted by points, then goal difference, then goals for.
+         */
         table.setItems(FXCollections.observableArrayList(league.getStandings()));
 
-        // Create add match button
+        /*
+         * Create add match button that takes user to add match screen
+         */
         Button addMatchButton = new Button("Add Match");
         addMatchButton.setOnAction(e -> addMatchScreen(stage, league));
 
-        // Create reset button
+        /*
+         * Create reset button that resets the league to the starting state
+         */
         Button resetButton = new Button("Reset League");
         resetButton.setOnAction(e -> {
             league = startingLeague();
@@ -115,7 +131,9 @@ public class SoccerApp extends Application {
             standingsScreen(stage);
         });
 
-        // Create exit button
+        /*
+         * Create exit button that closes the application
+         */
         Button exitButton = new Button("Exit");
         exitButton.setOnAction(e -> stage.close());
 
@@ -143,6 +161,9 @@ public class SoccerApp extends Application {
         Label titleAddMatch = new Label("Add Match");
         Label errorLabel = new Label();
 
+        /*
+         * Create combo boxes for selecting home and away teams. The options are the teams in tht league standings
+         */
         ComboBox<Team> homeTeamBox = new ComboBox<>();
         homeTeamBox.setItems(FXCollections.observableArrayList(league.getStandings()));
 
@@ -163,6 +184,9 @@ public class SoccerApp extends Application {
             Team homeTeam = homeTeamBox.getValue();
             Team awayTeam = awayTeamBox.getValue();
             
+            /*
+             * Handling: Ensure both teams are selected, they are not the same team, and that the goals entered are not negative numbers.
+             */
             if (homeTeam == null || awayTeam == null) {
                 errorLabel.setText("Select both teams.");
                 return;
@@ -190,8 +214,16 @@ public class SoccerApp extends Application {
             }
         });
 
+        /*
+         * Create back button to return to standings screen
+         */
         Button backButton = new Button("Back");
 
+        /*
+         * Style title and boxes for add match screen.
+         * The title is centered and bold. 
+         * The home and away team selection are in horizontal boxes with labels. 
+         */
         HBox titleAddMatchBox = new HBox(titleAddMatch);
         titleAddMatchBox.setAlignment(Pos.CENTER);
         titleAddMatchBox.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
@@ -225,7 +257,9 @@ public class SoccerApp extends Application {
         backButton.setOnAction(e -> standingsScreen(stage));
     }
 
-    // When a match is added, this screen confirms the addition and provides a button to return to the standings.
+    /*
+     * When a match is added, this screen confirms the addition and provides a button to return to the standings.
+     */
     private void confirmationScreen(Stage stage, League league) {
         Label confirmationLabel = new Label("Match added successfully!");
         Button backButton = new Button("Back to Standings");
@@ -239,7 +273,7 @@ public class SoccerApp extends Application {
         stage.setScene(scene);
     }
 
-    // Premier League teams for the 2025-2026
+    // Premier League teams for the 2025-2026 season
 
     private League startingLeague() {
         Team arsenal = new Team("Arsenal");
@@ -260,8 +294,7 @@ public class SoccerApp extends Application {
         Team nottinghamForest = new Team("Nottingham Forest");
         Team sunderland = new Team("Sunderland");
         Team tottenham = new Team("Tottenham Hotspur");
-        Team westHam = new Team("West Ham");
-        
+        Team westHam = new Team("West Ham");        
         Team wolves = new Team("Wolves");
         
 

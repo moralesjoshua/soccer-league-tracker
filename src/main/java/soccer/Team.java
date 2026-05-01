@@ -1,5 +1,9 @@
 package soccer;
 
+
+/*
+ * Team class represents a soccer team in the league, tracking its name, wins, losses, draws, goals for, and goals against. 
+ */
 public class Team {
     private String name;
     private int wins;
@@ -29,6 +33,10 @@ public class Team {
     public int getGoalsAgainst() {
         return goalsAgainst;
     }
+    /*
+     * Calculates the total points for the team based on wins and draws. Each win is worth 3 points and each draw is worth 1 point.
+     * Losses are worth 0 points
+     */
     public int getPoints() {
         return wins * 3 + draws;
     }
@@ -50,6 +58,9 @@ public class Team {
     public void addGoalsAgainst(int goals) {
         goalsAgainst += goals;
     }
+    /*
+     * Override the toString method to return the team name.
+     */
     @Override
     public String toString() {
         return name;

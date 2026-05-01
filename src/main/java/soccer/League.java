@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class League {
+    /*
+     * League manages the teams and matches in the league. 
+     * Adds teams, matches, and calculates the standings based on points, goal difference, and goals scored.
+     */
     private List<Team> teams;
     private List<Match> matches;
 
@@ -20,6 +24,10 @@ public class League {
     public List<Match> getMatches() {
         return matches;
     }
+    /*
+     * When a match is added, this updates the goals for and against for both teams, 
+     * as well as their wins, losses, and draws based on the match result.
+     */
     public void addMatch(Match match) {
         matches.add(match);
         Team homeTeam = match.getHomeTeam();
@@ -33,7 +41,9 @@ public class League {
         awayTeam.addGoalsFor(awayGoals);
         awayTeam.addGoalsAgainst(homeGoals);
 
-        // Update wins, losses, and draws based on match result using enum
+        /*
+         * Update wins, losses, and draws based on match result using enum
+         */
         Results result = match.getHomeResult();
         switch (result) {
             case WIN:
@@ -50,6 +60,9 @@ public class League {
                 break;
         }
     }
+    /*
+     * This method returns the standings sorted by points, then goal difference, then goals for
+     */
     public List<Team> getStandings() {
         List<Team> standings = new ArrayList<>(teams);
 
