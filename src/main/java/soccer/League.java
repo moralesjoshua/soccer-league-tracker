@@ -33,15 +33,21 @@ public class League {
         awayTeam.addGoalsFor(awayGoals);
         awayTeam.addGoalsAgainst(homeGoals);
 
-        if (homeGoals > awayGoals) {
-            homeTeam.addWin();
-            awayTeam.addLoss();
-        } else if (homeGoals < awayGoals) {
-            homeTeam.addLoss();
-            awayTeam.addWin();
-        } else {
-            homeTeam.addDraw();
-            awayTeam.addDraw();
+        // Update wins, losses, and draws based on match result using enum
+        Results result = match.getHomeResult();
+        switch (result) {
+            case WIN:
+                homeTeam.addWin();
+                awayTeam.addLoss();
+                break;
+            case LOSS:
+                homeTeam.addLoss();
+                awayTeam.addWin();
+                break;
+            case DRAW:
+                homeTeam.addDraw();
+                awayTeam.addDraw();
+                break;
         }
     }
     public List<Team> getStandings() {

@@ -52,24 +52,7 @@ public class Team {
     }
     @Override
     public String toString() {
-        return name + " | Pts: " + getPoints() +
-           " | W: " + wins +
-           " | D: " + draws +
-           " | L: " + losses +
-           " | GF: " + goalsFor +
-           " | GA: " + goalsAgainst +
-           " | GD: " + getGoalDifference();
-}
+        return name;
+    }
 
-    /*public void recordMatch(int goalsFor, int goalsAgainst) {
-        this.goalsFor += goalsFor;
-        this.goalsAgainst += goalsAgainst;
-        if (goalsFor > goalsAgainst) {
-            wins++;
-        } else if (goalsFor < goalsAgainst) {
-            losses++;
-        } else {
-            draws++;
-        }
-	*/
 }

@@ -24,4 +24,14 @@ public class Match {
     public int getAwayGoals() {
         return awayGoals;
     }
+
+    public Results getHomeResult() {
+        if (homeGoals > awayGoals) {
+            return Results.WIN;
+        } else if (homeGoals < awayGoals) {
+            return Results.LOSS;
+        } else {
+            return Results.DRAW;
+        }
+    }
 }

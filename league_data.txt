@@ -1,0 +1,20 @@
+TEAM,Arsenal
+TEAM,Aston Villa
+TEAM,Bournemouth
+TEAM,Brentford
+TEAM,Brighton
+TEAM,Burnley
+TEAM,Chelsea
+TEAM,Crystal Palace
+TEAM,Everton
+TEAM,Fulham
+TEAM,Leeds
+TEAM,Liverpool
+TEAM,Manchester City
+TEAM,Manchester United
+TEAM,Newcastle
+TEAM,Nottingham Forest
+TEAM,Sunderland
+TEAM,Tottenham Hotspur
+TEAM,West Ham
+TEAM,Wolves

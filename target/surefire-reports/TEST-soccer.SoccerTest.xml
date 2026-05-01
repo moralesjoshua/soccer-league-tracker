@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="soccer.SoccerTest" time="0.069" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/joshuamorales/soccer-league-tracker/target/test-classes:/Users/joshuamorales/soccer-league-tracker/target/classes:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-controls/17.0.10/javafx-controls-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-controls/17.0.10/javafx-controls-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-graphics/17.0.10/javafx-graphics-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-graphics/17.0.10/javafx-graphics-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-base/17.0.10/javafx-base-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-base/17.0.10/javafx-base-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-fxml/17.0.10/javafx-fxml-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-fxml/17.0.10/javafx-fxml-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/joshuamorales/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/joshuamorales/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/joshuamorales/.m2/repository/org/testfx/testfx-core/4.0.18/testfx-core-4.0.18.jar:/Users/joshuamorales/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/joshuamorales/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar:/Users/joshuamorales/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar:/Users/joshuamorales/.m2/repository/org/testfx/testfx-junit5/4.0.18/testfx-junit5-4.0.18.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/joshuamorales/soccer-league-tracker/target/surefire/surefirebooter-20260430222923496_3.jar /Users/joshuamorales/soccer-league-tracker/target/surefire 2026-04-30T22-29-23_394-jvmRun1 surefire-20260430222923496_1tmp surefire_0-20260430222923496_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/joshuamorales/soccer-league-tracker/target/test-classes:/Users/joshuamorales/soccer-league-tracker/target/classes:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-controls/17.0.10/javafx-controls-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-controls/17.0.10/javafx-controls-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-graphics/17.0.10/javafx-graphics-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-graphics/17.0.10/javafx-graphics-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-base/17.0.10/javafx-base-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-base/17.0.10/javafx-base-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-fxml/17.0.10/javafx-fxml-17.0.10.jar:/Users/joshuamorales/.m2/repository/org/openjfx/javafx-fxml/17.0.10/javafx-fxml-17.0.10-mac.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/joshuamorales/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/joshuamorales/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/joshuamorales/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/joshuamorales/.m2/repository/org/testfx/testfx-core/4.0.18/testfx-core-4.0.18.jar:/Users/joshuamorales/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/joshuamorales/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar:/Users/joshuamorales/.m2/repository/org/osgi/org.osgi.core/6.0.0/org.osgi.core-6.0.0.jar:/Users/joshuamorales/.m2/repository/org/testfx/testfx-junit5/4.0.18/testfx-junit5-4.0.18.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/joshuamorales"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/usr/local/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/joshuamorales/soccer-league-tracker"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/joshuamorales/soccer-league-tracker/target/surefire/surefirebooter-20260430222923496_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="25.0.2"/>
+    <property name="user.name" value="joshuamorales"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.0.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/joshuamorales/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/57/y1fjzprs25s2_j3n_xf5gqc40000gn/T/"/>
+    <property name="java.version" value="25.0.2"/>
+    <property name="user.dir" value="/Users/joshuamorales/soccer-league-tracker"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/joshuamorales/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="25.0.2"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="testWinLossUpdates" classname="soccer.SoccerTest" time="0.032"/>
+  <testcase name="testDrawUpdates" classname="soccer.SoccerTest" time="0.001"/>
+  <testcase name="testStandings" classname="soccer.SoccerTest" time="0.003"/>
+  <testcase name="testMatchResultForHomeTeam" classname="soccer.SoccerTest" time="0.001"/>
+</testsuite>

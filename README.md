@@ -1,5 +1,12 @@
-The league logic is implemented. Matches can be added between two teams, and the program correctly updates team statistics including points, wins/losses/draws, goals for, goals against, and goal difference.
+The Soccer League Tracker is a JavaFX application that allows users to emulate a soccer league. For simplicity the program uses teams from the Premier League.
 
-A JUnit test is included to verify that adding a match updates the teams statistics.
+Features
+- View the league standings in table format
+- Add match results to teams who play each other
+- Point allocation for Wins, Draws, Losses
+- GF, GA, and GD are also accounted for
+- Reset the league standings back to 0 for all teams
+- Relevant detailsl such as team names and goals are recorded into a .txt
 
-No GUI yet. 
+
+
